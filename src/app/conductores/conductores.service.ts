@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ConductoresService {
 
@@ -14,4 +14,11 @@ export class ConductoresService {
     return this.http.get(this.apiUrl);
   }
 
+  saveConductor(conductor: any) {
+    return this.http.post(this.apiUrl, conductor);
+  }
+
+  deleteConductor(id: number) {
+    return this.http.delete(`${this.apiUrl}/${id}`);
+  }
 }
