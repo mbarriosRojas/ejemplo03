@@ -1,23 +1,14 @@
 {
-  "name": "ejemplo03",
-  "version": "0.0.1",
+  "name": "frontend",
+  "version": "1.0.0",
   "scripts": {
-    "start": "node server/index.js",
-    "build": "ng build",
-    "dev": "ng serve"
+    "ng serve": "ng serve"
   },
   "dependencies": {
-    "@angular/common": "12.2.16",
-    "@angular/compiler": "12.2.16",
-    "@angular/core": "12.2.16",
-    "@angular/forms": "12.2.16",
-    "@angular/platform-browser": "12.2.16",
-    "@angular/platform-browser-dynamic": "12.2.16",
-    "@angular/router": "12.2.16",
-    "express": "4.17.1",
-    "mongoose": "6.3.5",
-    "rxjs": "7.4.0",
-    "tslib": "2.3.1",
-    "typescript": "4.3.5"
+    "@angular/common": "^13.0.0",
+    "@angular/core": "^13.0.0",
+    "@angular/forms": "^13.0.0",
+    "@angular/platform-browser": "^13.0.0",
+    "@angular/platform-browser-dynamic": "^13.0.0"
   }
 }

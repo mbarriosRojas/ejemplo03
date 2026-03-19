@@ -1,11 +1,10 @@
 const express = require('express');
 const app = express();
-const port = 3000;
-const conductoresRouter = require('./routes/conductores');
+const viajesRouter = require('./routes/viajes');
+const viajeController = require('./controllers/viaje.controller');
 
-app.use(express.json());
-app.use('/conductores', conductoresRouter);
+app.use('/viajes', viajesRouter);
 
-app.listen(port, () => {
-  console.log(`Server escuchando en el puerto ${port}`);
+app.listen(3000, () => {
+  console.log('Servidor escuchando en el puerto 3000');
 });
