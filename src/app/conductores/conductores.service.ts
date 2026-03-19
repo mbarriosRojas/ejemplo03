@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ConductoresService {
 
-  private apiUrl = 'http://localhost:3000/conductores';
+  private apiUrl = 'http://localhost:3000/api/conductores';
 
   constructor(private http: HttpClient) { }
 
@@ -14,4 +14,19 @@ export class ConductoresService {
     return this.http.get(this.apiUrl);
   }
 
+  createConductor(conductor: any) {
+    return this.http.post(this.apiUrl, conductor);
+  }
+
+  updateConductor(conductor: any) {
+    return this.http.put(`${this.apiUrl}/${conductor.id}`, conductor);
+  }
+
+  deleteConductor(id: number) {
+    return this.http.delete(`${this.apiUrl}/${id}`);
+  }
+
+  asignarVehiculo(conductorId: number, vehiculoId: number) {
+    return this.http.put(`${this.apiUrl}/${conductorId}/asignar-vehiculo`, { vehiculoId });
+  }
 }
