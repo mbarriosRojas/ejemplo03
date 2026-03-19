@@ -4,17 +4,19 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
 })
-export class ViajesService {
+export class EstadisticasService {
 
   private apiUrl = 'http://localhost:3000/api';
 
   constructor(private http: HttpClient) { }
 
-  getViajes() {
-    return this.http.get(`${this.apiUrl}/viajes`);
-  }
-
   getEstadisticas() {
     return this.http.get(`${this.apiUrl}/estadisticas`);
+  }
+
+  getEstadisticasPorPeriodo(inicio: Date, fin: Date) {
+    return this.http.get(`${this.apiUrl}/estadisticas/por-periodo`, {
+      params: { inicio: inicio.toISOString(), fin: fin.toISOString() },
+    });
   }
 }
