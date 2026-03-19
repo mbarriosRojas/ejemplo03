@@ -1,9 +1,9 @@
+// Agregar la ruta para los clientes
 const express = require('express');
 const app = express();
-const viajesRouter = require('./routes/viajes');
-const viajeController = require('./controllers/viaje.controller');
+const clienteRoute = require('./routes/clientes');
 
-app.use('/viajes', viajesRouter);
+app.use('/clientes', clienteRoute);
 
 app.listen(3000, () => {
   console.log('Servidor escuchando en el puerto 3000');
